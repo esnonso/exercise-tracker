@@ -12,7 +12,7 @@ app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended:true}))
 
 //mongoose connection
-mongoose.connect('mongodb+srv://starboy:nelnon54321@cluster0.iseij.mongodb.net/cluster0?retryWrites=true', {
+mongoose.connect(process.env.MONGOURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true
